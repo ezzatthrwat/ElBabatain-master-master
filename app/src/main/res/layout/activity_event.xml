@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.events.EventActivity"
+    android:background="#F3F2F2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            app:textColor="@color/white"
+            app:selectedItem_textColor="@color/design_default_color_primary"
+            app:todayItem_background="@drawable/circle_white_stroke_background"
+            app:selectedItem_background="@drawable/circle_white_solid_background"
+            app:todayItem_textColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:buttonLeft_drawableTintColor="@color/white"
+            app:buttonRight_drawableTintColor="@color/white"
+            app:expandIconColor="@color/white"
+            app:primaryColor="@color/design_default_color_primary">
+        </com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/design_default_color_primary"
+            app:cornerRadius="20dp"
+            android:layoutDirection="rtl"
+            android:text="جميع الاحداث"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            android:id="@+id/AllEvents_BTN"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+           >
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EventsRecyclerView"
+                tools:listitem="@layout/event_list_item"/>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

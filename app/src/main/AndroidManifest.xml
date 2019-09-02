@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.ideal.family.elbabatain">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".di.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app2_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app2_round"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="false"
+        android:usesCleartextTraffic="true"
+        tools:replace="supportsRtl">
+        <activity android:name=".ui.events.EventActivity"></activity>
+        <activity android:name=".ui.contactus.ContactUs" />
+        <activity android:name=".ui.whoarewe.WhoAreWe" />
+        <activity android:name=".ui.news.NewsActivity" />
+        <activity android:name=".ui.contain.ContainActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.news.OnlyOneNews_Activity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
